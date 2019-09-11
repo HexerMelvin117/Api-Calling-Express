@@ -1,4 +1,8 @@
-const express = require('express')
-const app = express()
+const http = require('http')
+const app = require('./routing/index')
 
-app.listen(5000, () => console.log('Hello World'))
+const port = process.env.PORT || 5000
+
+const server = http.createServer(app)
+
+server.listen(port)
