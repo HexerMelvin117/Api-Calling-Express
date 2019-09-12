@@ -10,4 +10,8 @@ app.get('/all', (req, res) => {
   res.send(query.getHeroes())
 })
 
+app.get('/top10', (req, res) => {
+  res.send(query.getTopTenForce())
+})
+
 module.exports = app
